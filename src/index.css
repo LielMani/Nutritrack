@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root { height: 100%; color-scheme: light; }
+body {
+  background: #f3f1ea;
+  color: #1f2a21;
+  font-family: Heebo, system-ui, 'Segoe UI', Arial, sans-serif;
+  font-size: 14px;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
+}
+input, button, select, textarea { font: inherit; }
+::placeholder { color: rgba(31, 42, 33, .38); }
+
+@layer components {
+  .card { @apply rounded-lg border border-ink/[.14] bg-surface p-5 ; }
+  .input { @apply w-full rounded-md border border-ink/[.16] bg-surface px-4 py-3 text-[14px] outline-none transition focus:border-leaf focus:bg-surface; }
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-md bg-leaf px-5 py-3 text-[14px] font-semibold text-paper transition active:scale-[.98] disabled:opacity-40; }
+  .btn-ghost { @apply inline-flex items-center justify-center gap-2 rounded-md bg-ink/[.06] px-5 py-3 text-[14px] font-semibold text-ink transition active:scale-[.98]; }
+  .h-display { @apply font-medium; }
+}
+
+@keyframes sheet-up { from { transform: translateY(100%); } to { transform: translateY(0); } }
+.sheet-up { animation: sheet-up .25s ease-out; }
+@media (prefers-reduced-motion: reduce) { .sheet-up { animation: none; } }
+
+.tnum { font-variant-numeric: tabular-nums; }

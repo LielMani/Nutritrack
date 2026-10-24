@@ -1,0 +1,15 @@
+{
+  "name": "NutriTrack - מעקב תזונה",
+  "short_name": "NutriTrack",
+  "description": "מעקב קלוריות, מאקרו, מים ומשקל",
+  "lang": "he",
+  "dir": "rtl",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f3f1ea",
+  "theme_color": "#f3f1ea",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
